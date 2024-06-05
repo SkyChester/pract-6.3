@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестування</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .question {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        select {
+            font-size: 18px;
+            padding: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">Що можна їсти?</div>
+    <select id="answer">
+        <option value="0">Виберіть відповідь</option>
+        <option value="1">Яблуко</option>
+        <option value="2">Камінь</option>
+        <option value="3">Книга</option>
+    </select>
+    <button onclick="checkAnswer()">Перевірка</button>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value;
+            if (answer == '1') {
+                alert('Правильно! Яблуко можна їсти.');
+            } else if (answer == '0') {
+                alert('Будь ласка, виберіть відповідь.');
+            } else {
+                alert('Неправильно. Спробуйте ще раз.');
+            }
+        }
+    </script>
+</body>
+</html>
